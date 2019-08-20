@@ -5,7 +5,7 @@ const fs = require('fs');
 module.exports = {
   up: (queryInterface, Sequelize) => {
     
-      let rawdata = fs.readFileSync('../../docs/aeroportos.json');
+      let rawdata = fs.readFileSync('./docs/aeroportos.json');
       let rawAirports = JSON.parse(rawdata);
 
       let airports = [];

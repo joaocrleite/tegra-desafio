@@ -12,7 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return response()->json([
+        'status' => true,
+        'version' => '0.0.1'
+    ]);
 });
 
 

@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./server/index.js",
+    "start": "node ./server/index.js",
     "reset-db": "./node_modules/.bin/sequelize db:migrate:undo:all",
     "migrate-db": "./node_modules/.bin/sequelize db:migrate",
     "populate-db": "./node_modules/.bin/sequelize db:seed:all"

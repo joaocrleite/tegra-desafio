@@ -9,7 +9,7 @@ const {Flight} = require('../models/index');
 module.exports = {
   up: async (queryInterface, Sequelize) => {
 
-    let rawdata = fs.readFileSync('../../docs/99planes.json');
+    let rawdata = fs.readFileSync('./docs/99planes.json');
     let rawFlights = JSON.parse(rawdata);
 
     let flights = [];
@@ -28,6 +28,8 @@ module.exports = {
             date:  row.data_saida,
             take_off_at,
             landing_at,
+            createdAt: new Date(),
+           updatedAt: new Date()
         };
 
         flights.push(dataFlight);
@@ -37,7 +39,7 @@ module.exports = {
     let rawFlights2 = [];
     let flights2 = []
 
-    fs.createReadStream('../../docs/uberair.csv').pipe(csv())
+    fs.createReadStream('./docs/uberair.csv').pipe(csv())
       .on('data', (row) => {
 
         let take_off_at = row.data + ' ' + row.horario_saida + ':00';
@@ -52,6 +54,8 @@ module.exports = {
             date: row.data,
             take_off_at,
             landing_at,
+            createdAt: new Date(),
+            updatedAt: new Date()
         };
 
         flights2.push(dataFlight);

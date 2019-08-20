@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+### Workspace Utilities ##################################
+    joaocrleite:
+      build: ../../joaocrleite.com
+      ports:
+        - "3001:3001"
+    flyfox:
+      build: ../../flyfox.com.br
+      ports:
+        - "3002:3002"

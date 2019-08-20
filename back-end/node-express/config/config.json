@@ -1,23 +1,26 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
+    "username": "tegra",
+    "password": "joaoleite",
     "database": "tegra_node",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "host": "172.17.0.1",
+    "dialect": "mysql",
+    "port": "3308"
   },
   "test": {
-    "username": "root",
-    "password": null,
+    "username": "tegra",
+    "password": "joaoleite",
     "database": "tegra_node",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "host": "172.17.0.1",
+    "dialect": "mysql",
+    "port": "3308"
   },
   "production": {
-    "username": "root",
-    "password": null,
+    "username": "tegra",
+    "password": "joaoleite",
     "database": "tegra_node",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "host": "172.17.0.1",
+    "dialect": "mysql",
+    "port": "3308"
   }
 }
