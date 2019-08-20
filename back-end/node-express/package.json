@@ -6,13 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./server/index.js",
-    "migrate": "node ./app/migrations/users.js"
+    "reset-db": "./node_modules/.bin/sequelize db:migrate:undo:all",
+    "migrate-db": "./node_modules/.bin/sequelize db:migrate",
+    "populate-db": "./node_modules/.bin/sequelize db:seed:all"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "csv-parser": "^2.3.0",
     "express": "^4.17.1",
     "mysql": "^2.17.1",
     "mysql2": "^1.6.5",
